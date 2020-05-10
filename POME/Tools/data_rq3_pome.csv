@@ -1,0 +1,205 @@
+sentence,oracle_aspect,oracle_sentiment,predicted_aspect,predicted_sentiment
+I solved it . because spring-boot version1.4 not support log4j,compatibility,NEG,compatibility,NEG 
+"If you don't have spring-boot (it should work w/o it as well but the docs are spring-boot centric), check out this repo or this GitHub issue, you will need a ConfigServicePropertySourceLocator.",documentation,NEG,compatibility,POS 
+The problem is that FrameLayout.LayoutParams constructor doesn`t support another FrameLayout as a parameter until the api 19.,compatibility,NEG,compatibility,POS 
+"For Android development targeting API < 19, Vitalii Fedorenko one-to-one relationship solution doesn't work because Objects.equals isn't implemented.",functional,NEG,compatibility,NEG
+another reason for this error can be that the version of mongo-java-driver is not compatible with your mongo application.,compatibility,NEG,compatibility,NEG 
+"There's no doc on this constructor but javadoc for LinearLayout.LayoutParams (int width, int height, float weight) says the following :",documentation,NEG,documentation,POS 
+"Problem is: I'm not able to change the Mockito version (2.7.22 would work) because of dependencies to org.springframework.boot:spring-boot-starter-test:1.4.3.RELEASE which we are using (Spring, Mockito issue).",usability,NEG,functional,POS 
+"The Base64.decode won't be able to decode it, So it has to be removed from your encoded String:",functional,NEG,functional,NEG 
+"You should be able to get the source for gwt-gadgets and fix/compile it against a more recent version of gwt-user, or failing that you might have to use an older GWT more in line with the release date of gwt-gadgets 1.0.3 (May 2009!)",compatibility,NEG,functional,POS 
+It looks like gwt-math is no longer supported and its content was moved to gwt-user.,community,NEG,functional,POS 
+"If you really want to use the same handler for all checkboxes, you can use Event.getSource() to get the source of the event, but you end up with some ugly downcasting:",functional,NEG,functional,POS 
+"The problem is mocking the Pool.getInstance() method, since you want your connection to be a mock, since you could then let it throw exceptions if necessary. Mockito doesn't let you do that.",functional,NEG,functional,NEG 
+"You can't just use StringUtils.join(arr, "" - ""); because StringUtils doesn't have that overloaded version of method.",functional,NEG,functional,NEG 
+With the mongo-java-driver you can't access the subdocument's fields directly.,functional,NEG,functional,NEG 
+"Problem is due to characters sent in the request, characters like [] {} : """" , all of them must be encoded, to do that you can use method URLEncoder.encode.",functional,NEG,functional,POS 
+"Note: Resources.getResource(...) might be a bit slow, instead you can store the R file resource references in a static final array in your class and create a mapping between the array and your buttons by storing an index instead of the file name in the android:tag, and just use: int soundResourceId = yourResourceArray[Integer.parseInt(v.getTag())] to get the index for the array",performance,NEG,performance,NEG 
+"Trying to use Lists.transform will not help you at all because A) it doesn't do what you seem to think it does, B) it's not the right way to do what you're trying to do (a for-each loop is), and C) you have to iterate over the List returned by Lists.transform, which will not be faster than a for-each loop.",performance,NEG,performance,NEG 
+ThreadLocal.get (think HashMap#get) is much slower then getting these fields directly from Thread.,performance,NEG,performance,NEG 
+"(3) Unless the ForkJoinPool.ManagedBlocker API is used, or the number of possibly blocked tasks is known to be less than the pool's ForkJoinPool.getParallelism() level, the pool cannot guarantee that enough threads will be available to ensure progress or good performance.",performance,NEG,performance,POS
+"I was trying to do this and found that, using the answers above, when using Functions.identity() for the key to the Map, then I had issues with using a local method like this::localMethodName to actually work because of typing issues.",reliability,NEG,reliability,NEG 
+GWT.log does not work correctly for exceptions.,functional,NEG,reliability,NEG 
+NB: As a MinMaxPriorityQueue is not thread safe you need to use the decorator Queues.synchronizedQueue(Queue) allowing to make it thread safe.,reliability,NEG,reliability,NEG 
+"ImmutableSet.copyOf needs to iterate over your HashSet, which isn't safe if another thread is concurrently modifying it.",reliability,NEG,reliability,POS 
+Since Consumer.accept and Function.apply do not allow to throw checked exceptions you may want to define similar functional interfaces which allow checked exceptions and use it in that method.,functional functional,NEG POS,functional,NEG 
+Since Consumer.accept and Function.apply do not allow to throw checked exceptions you may want to define similar functional interfaces which allow checked exceptions and use it in that method.,functional functional,NEG POS,functional,NEG 
+"In you are using String for the transporting data be aware that you may have to call JSON.parse() on the front-end, and your JSON will be string escaped which looks silly; if you are reading you data using Jacksons ObjectMapper I would recommend using a ObjectMapper.readTree() which returns a JsonNode, and put that into your DTO class.",usability functional,NEG POS,functional,POS 
+spring-dao has been superseded by spring-tx see Spring's documentation on What's new in Spring 2.0 and 2.5? section 2.7.1.2. Jar packaging in Spring 2.5. You will note that both the spring-tx api and spring-dao api both contain the AopNamespaceUtils class with the overloaded registerAutoProxyCreatorIfNecessary method.,documentation,NEU,documentation,POS 
+AttributeMap.attr(AttributeKey) allow you to store and access stateful information that is related with a handler and its context.,functional,NEU,functional,POS 
+AttributeMap.attr(AttributeKey) allow you to store and access stateful information that is related with a handler and its context.,functional,NEU,functional,POS 
+"Now, personally, I would chose org.springframework.boot:spring-boot-dependencies as Spring Boot is mature, have an important and active community and is often updated. See the spring-boot github.",community,POS,community,POS 
+"which does throw an exception for an invalid zone ID. The zone ID format accepted by ZoneId.of(String) is not exactly the same as that of TimeZone.getTimeZone(String), but as the Javadoc of ZoneId.of(String) says, most region IDs are compatible.",functional,POS,compatibility,POS 
+"Spring 4.1.6 supports hibernate 3 and hibernate 4. So for integrating hibernate 5 with spring, use spring 4.3 jar(latest jar) where spring-orm jar is having hibernate5 support.",compatibility,POS,compatibility,POS 
+for minimal config via spring-boot properties just check this spring-boot-jpa tutorial.,documentation,POS,documentation,POS 
+"If you customizing package scans in your project, then probably you need to manually configure bean which requires path to scan, e.g. for JPA you can create your own bean of LocalContainerEntityManagerFactoryBean (you can find auto-configuration example here - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration#entityManagerFactory - class link from spring-boot 1.5.*).",documentation,POS,documentation,POS 
+See the Javadoc for Timer.cancel() (emphasis mine):,documentation,POS,documentation,POS 
+"Please see Files.lines(), Multimaps.index() and Multimaps.transformValues() docs for further reference.",documentation,POS,documentation,POS 
+"It is better to use something like Guava's Predicates.notNull(), or a method that is called boolean nullReferenceToBoolean(@Nullable final Object o) or some such, that way the intention is self documenting.",functional,POS,documentation,POS 
+"Method 1: If you read the documentation for Node, you will realize that Node.getNodeValue() will always return null for Element nodes (check the table at the top of the page).",documentation,POS,documentation,POS 
+there is a good tutorial on extracting data from XML here at tutorialspoint their basic example shows the use of a method called Document.getElementByTagName(String tagName) which returns an Element object.,documentation,POS,documentation,POS 
+You could find more information on the MongoDB JavaDoc : https://static.javadoc.io/org.mongodb/mongo-java-driver/3.2.0-rc0/com/mongodb/client/model/geojson/MultiPolygon.html,documentation,POS,documentation,POS 
+"If you check the Jackson documentation for @JsonInclude annotation here, which is used to specify which fields should be ignored or serialized based on the fields values, you can see that there are a couple of parameters (NON_ABSENT and NON_EMPTY) that can be used to ignore Optional.empty values but they are combined together with null values so they will not work in your case.",documentation,POS,documentation,POS 
+"And see the documentation for how to use the @ModelAttribute annotation on methods and on method arguments to load a user from the database and add it to the model before the @RequestMapping method is called, and to populate this user with request parameters when the @RequestMapping method is called.",documentation,POS,documentation,POS 
+See the spring-context XSD documentation for complete details.,documentation,POS,documentation,POS 
+"If you use Saxon as your schema validator, you can capture the result as a tree in which the NodeInfo.getSchemaType() method returns the type annotation of a node (however, Saxon does not deliver a complete PSVI, only the part of the PSVI mandated by the XSLT and XQuery specifications.)",functional,POS,functional,POS 
+Since you are using spring-boot you can take advantage of the MongoDataAutoConfiguration class.,functional,POS,functional,POS 
+You can do most of this config using application.properties if you are using spring-boot.,functional,POS,functional,POS 
+With spring-boot you may create a separate config component and then autowire it.,functional,POS,functional,POS 
+"If you are just interested in reading the properties before your Spring Boot application is initialized, you can parse the yaml file using Spring's YamlPropertiesFactoryBean before you call SpringApplication.run.",functional,POS,functional,POS 
+The google guava lib has a MoreExecutors.directExecutor() method that will return such an executor.,functional,POS,functional,POS 
+"You can retrieve the current token using History.getToken, process it and then set it using History.newItem.",functional,POS,functional,POS 
+Response.ResponseBuilder has a cookie method for setting cookies in the response.,functional,POS,functional,POS 
+"With Google's Guava collections library, you can use Collections2.transform().",functional,POS,functional,POS 
+"If you are allowed to use third party libraries, Guava provides this as the single method Lists.partition, which is a constant time view.",functional,POS,functional,POS 
+You can use Random.nextBoolean() to determine if its a random positive or negative int.,functional,POS,functional,POS 
+"If you want to filter a list and get a list back, and not just a Collection or an Iterable, you can use ImmutableList.copyOf(Iterables.filter(list, predicate)), which ""states up front"" what it's doing and how expensive it is.",functional,POS,functional,POS 
+"Guava has a different mechanism for ""a cache that only ever contains one value""; it's called Suppliers.memoizeWithExpiration.",documentation,POS,functional,POS 
+"If you want to provide specific implementations for GWT vs. a JVM, either use GWT.isScript() if the JVM-specific code is translatable to GWT (you could try annotating it with @GwtIncompatible and see if GWT complains), or you can use super source; see “Overriding one package implementation with another” in http://www.gwtproject.org/doc/latest/DevGuideOrganizingProjects.html#DevGuideModuleXml",documentation,POS,functional,POS 
+"Futures.transform is not fluently chainable like RxJava, but you can still use it to set up Futures that depend on one another.",functional,POS,functional,POS 
+As of Java 8 you can use methods like Optional.isPresent and Optional.orElse to handle null in getter chains:,functional,POS,functional,POS 
+To obtain real path to a resource you can use ServletContext.getRealPath(String path).,functional,POS,functional,POS 
+"Guava will let you filter by any Predicate, using Iterables.filter, so you don't have to use a Pattern if you don't want to.",functional,POS,functional,POS 
+So to set the property in code you can use the addRule() method of the RelativeLayout.LayoutParams.,functional,POS,functional,POS 
+"If you are able to use Guava Futures, you can use Futures.allAsList or Futures.successfulAsList.",functional,POS,functional,POS 
+"If so (And most likely even if not) each user should have a session and you should be able to save the data in that session using HttpServletRequest.getSession().setAttribute(java.lang.String, java.lang.Object).",functional,POS,functional,POS 
+"You could create a ListEditor implementation direcly, but GWT can do that for you if you tell it how to create and destroy an Editor<ChildDTO> by extending EditorSource<ChildDTOEditor> and using ListEditor.of(new YourChildDTOEditorSourceImpl())",functional,POS,functional,POS 
+"To get a mutable list you can wrap the returned list in a new ArrayList as a couple of answers point out, but a cleaner solution is to use Guava's Lists.newArrayList() (available since at least Guava 10, released in 2011).",functional,POS,functional,POS 
+"In a GWT context, you could use GWT.create(UserAgent.class).getCompileTimeValue() to access the user.agent binding property value, and thus replace the <when-property-is name=""user.agent"" value""…"" /> of your *.gwt.xml with a switch…case (note that you'd then have to handle fallbacks yourself; e.g. ie9 falls back to ie8 when no rule specifically matches ie9).",functional,POS,functional,POS 
+"You could also use things like GWT.isClient() or properties of Window.Navigator; and starting with GWT 2.8 you can use System.getProperty() to access your configuration and binding properties (e.g. System.getProperty(""user.agent"", ""unknown"")).",functional,POS,functional,POS 
+"Alternatively, you can use Multimap.asMap() to convert it to a java.util.Map, and then work with that instead.",functional,POS,functional,POS 
+You can use Multimap.keySet() to get just the distinct keys.,functional,POS,functional,POS 
+It also has a helper method that returns a view of the map containing the entries that have a value different than Optional.absent().,functional,POS,functional,POS 
+"If you use relative path, you must use HttpServletRequest.getRequestDispatcher().",functional,POS,functional,POS 
+"For an earlier version of Java and with Guava, you can use Maps.asMap since Guava 14.0:",compatibility,POS,functional,POS 
+"Note that with Java 8, if b were defined as Optional<Object> (if not, you can always turn it into an Optional using Optional.ofNullable(b)), you could use orElseGet and write:",functional,POS,functional,POS 
+It has methods such as Random.nextInt where you can give it an upper bound and it will give you a random number between 0 (inclusive) and that number (exclusive).,functional,POS,functional,POS 
+You can implement this logic in the Java-8 style iterating the list twice and using Optional.orElseGet:,functional,POS,functional,POS 
+As far as I know if you use the normal java.util.logging instead of GWT.log you should get stack traces in SDM.,functional,POS,functional,POS 
+"As such, you can use Multimaps.index(Iterable, Function) and Multimaps.asMap(ListMultimap) to get a Map<F<T>, List<T>>:",functional,POS,functional,POS 
+"You can transform the map values into Serializable lists using Maps.transformValues(Map, Function):",functional,POS,functional,POS 
+It's not possible to have more than one of those methods so there can be no cases where there's confusion about what Iterables.indexOf() will iterate over.,usability,POS,functional,NEG 
+"You could use a library like Guava, call Lists.transform(ubers, getTmFunction) to create a view, and pass that to Collections.binarySearch.",functional,POS,functional,POS 
+"Guava has a Function interface and Collections2.transform(Collection<E>, Function<E,E2>) method provides the feature you require.",functional,POS,functional,POS 
+The Guava library has an Ordering.greatestOf method that returns the greatest K elements from an Iterable in O(N) time and O(K) space.,functional,POS,functional,POS 
+Guava has an Iterables.cycle method which does exactly this.,functional,POS,functional,POS 
+"If you are using an ImmutableMultimap then instead of Multimaps.invertFrom(Multimap, M) you can simply use ImmutableMultimap.inverse():",functional,POS,functional,POS 
+"To execute some task after 10 seconds, you can use Timer.schedule():",functional,POS,functional,POS 
+"You can use Window.open() on the client side, to open a web page in a new window.",functional,POS,functional,POS 
+"If you didn't want to change the signature of your method, you could use Optional.ofNullable() to turn an Integer into an Optional<Integer>:",functional,POS,functional,POS 
+"You can also use Optional<String> to wrap your keys instead, and then your null object becomes Optional.empty() (or Optional.absent() if you use Guava's Optional):",functional,POS,functional,POS 
+"in the webapp's <Context> element in Webapp/META-INF/context.xml or Tomcat/conf/server.xml so that Tomcat should automatically parse multipart/form-data request bodies when HttpServletRequest.getPart* or HttpServletRequest.getParameter* is called, even when the target servlet isn't marked with the @MultipartConfig annotation.",functional,POS,functional,POS 
+"If you can use Guava, and only need read access to the transformed map, you could use Maps.transformValues(NavigableMap, Function).",functional,POS,functional,POS 
+In this case you can get the target ImageView using DragEvent.getPickResult().getIntersectedNode() or Event.getTarget:,functional,POS,functional,POS 
+"The method Objects.equals(Object, Object) automatically checks nulls first.",functional,POS,functional,POS 
+"To answer your question, using if (""Hello"".equals(str)) is just fine, but if you ever want to replace the string literal ""Hello"" by a variable, you should use Objects.equals(greeting, str). Checking for an empty string is absolutely unnecessary.",functional,POS,functional,POS 
+"If you're open to using a third-party library, with Eclipse Collections version 7.x, you can either use detect with Predicates.instanceOf() or if you want to filter the list, can use selectInstancesOf().",functional,POS,functional,POS 
+"if you want to use the element not the widget you can use DOM.createButton(), and use the listener.",functional,POS,functional,POS 
+"If you need to update specifically keyA alone then you can use HashMap.put(""keyA"",""value"");",functional,POS,functional,POS 
+You can use findFirst which returns Optional object and then use Optional.orElseGet to set your default value.,functional,POS,functional,POS 
+"You can set values or objects in that session using HttpSession.setAttribute(""name you want to refer to"", actual value or object) once a user logs in. And when a user presses logout, you can use HttpSession.invalidate(); to finish the session.",functional,POS,functional,POS 
+"For the equality, first you have to check the type compatibility and you can then use the equals() method by comparing the name String fields. Rather using directly String#equals(Object o) method, you can use Objects.equals(Object a, Object b) that spares the null check for the name field. At last, when you override equals(), hashcode() should also be consequently overriden in order to keep these two methods consistent.",functional,POS,functional,POS 
+We can now compare these two arrays using Ordering.lexicographical():,functional,POS,functional,POS 
+"Here is a way to be safe against the fact that IDs of ZoneId are not exactly the same as IDs of TimeZone: first use TimeZone.getAvailableIDs() to check if the provided timezone ID is a string like ""Europe/Rome"", second use ZoneId.of() if it is a fixed offset ID, otherwise it is invalid.",reliability,POS,functional,POS 
+"I believe the optimal solution would be to have hibernate load the object on the new thread, meaning in your code snippet you would pass a document id and Document.get(id) on your session supported thread.",functional,POS,functional,POS 
+"It might be a little over-engineering, but you can use Guava's Ints.tryParse(String) with Java 8's Optionals like this:",functional,POS,functional,POS 
+The gwt-maven-plugin will automatically add gwt-dev to your classpath so that the compiler can be run correctly.,functional,POS,functional,POS 
+"You should instantiate one ArrayList, read all movie titles and add them to the list, then use Random.nextInt() to pick one and print it.",functional,POS,functional,POS 
+The google guava lib has a MoreExecutors.directExecutor() method that will return such an executor.,functional,POS,functional,POS 
+With Java 9 you can use the new Optional.or method to concisely implement this logic:,functional,POS,functional,POS 
+I believe you can extract visitor's IP address using HttpServletRequest.getRemoteAddress(),functional,POS,functional,POS 
+"For example, you can get the 00:00 of the day using CalendarUtil.resetTime(date) and the next day using CalendarUtil.addDaysToDate(date, 1).",functional,POS,functional,POS 
+Also note that you should use URLEncoder.encode() for values that come from user input:,functional,POS,functional,POS 
+"I suggest returning JSON, since you can use JSON.parse(response) to get a useful JavaScript object that's easy to work with.",usability,POS,functional,POS 
+"If you didn't want to change the signature of your method, you could use Optional.ofNullable() to turn an Integer into an Optional<Integer>:",functional,POS,functional,POS 
+"You can also use Optional<String> to wrap your keys instead, and then your null object becomes Optional.empty() (or Optional.absent() if you use Guava's Optional):",functional,POS,functional,POS 
+You can use Optional.ofNullable to achieve this:,functional,POS,functional,POS 
+You can use JSON.parse('${objectsJson}') in JSP to get a javascript object or if the object is stored in hidden field,functional,POS,functional,POS 
+"if you are using JSON.stringify() then you have to use BufferedReader in servlet , You can use request.getparameter in servlet when you are passing data in URL of servlet.",functional,POS,functional,POS 
+You can use the MongoDB command line to run update queries.,functional,POS,functional,POS 
+You can use Gson and Document.parse(String json) to convert a POJO to a Document.,functional,POS,functional,POS 
+"I believe the optimal solution would be to have hibernate load the object on the new thread, meaning in your code snippet you would pass a document id and Document.get(id) on your session supported thread.",functional,POS,functional,POS 
+"With mongo-java-driver 3.2+, you can try creating a list of Documents and then iterate through all to print your specific values.",functional,POS,functional,POS 
+"Note that in JavaScript (or Typescript), the Date object has a toISOString() method that will produce an ISO-8601 compliant date string, as will JSON.stringify().",functional,POS,functional,POS 
+"You could get the IType's fully qualified name (maybe using IType.getTypeQualifiedName()), then use Class.forName() on that name to get the Class object, then use the Modifier.isAbstract() as others have recommended.",functional,POS,functional,POS 
+"Similarly, to register FormItem and all its subclasses found in the classpath (including your custom subclasses), you can use the BeanFactory.FormItemMetaFactory.",functional,POS,functional,POS 
+"Instead, you should create a MouseAdapter, override the mouseClicked method, and use JLabel.addMouseListener to add it to your JLabels. The best way to get it to, as you say, ""display a panel and the other should be removed"" would be to use a CardLayout.",functional,POS,functional,POS 
+Then spring-jdbc automatically picked up the SPRING_APPLICATION_JSON settings without any of the 'extra classes' below.,functional,POS,functional,POS 
+Spring's spring-beans library has a org.springframework.beans.BeanUtils class that provides a copyProperties method to copy a source object instance into a target object instance.,functional,POS,functional,POS 
+In case of plain jdbc method then you can either use pure jdbc and do the transaction handling on your own or use spring-jdbc that comes with a transaction manager.,functional,POS,functional,POS 
+"You can mock a principal in your test case, set some expectations on it and then pass this mock down the mvc call using MockHttpServletRequestBuilder.principal().",functional,POS,functional,POS 
+You can check if transaction is active using TransactionSynchronizationManager.isActualTransactionActive().,functional,POS,functional,POS 
+org.springframework.http.HttpStatus has a method HttpStatus.is2xxSuccessful() returns a boolean.,functional,POS,functional,POS 
+"If you are using spring, you can use StringUtils.hasLength(String str) function -from org.springframework.util package- which makes null check and checks length of given string.",functional,POS,functional,POS 
+"If you're determined to have a private field that's not set by a public constructor or setter, you could use Spring's ReflectionUtils.setField() from within your test:",functional,POS,functional,POS 
+"You can use spring HandlerResultMatchers#methodCall & MvcUriComponentsBuilder#on to achieve your way, for example:",functional,POS,functional,POS 
+spring-mock has nice support for mocking servlet classes.,functional,POS,functional,POS
+"Also note the usage of Random.nextInt(limit) which does exactly what you want, is probably faster, and expressed the intent more clearly than using a modulo.",performance,POS,performance,POS 
+"Where possible, set the Content-Length header (with the ServletResponse.setContentLength(int) method), to allow the servlet container to use a persistent connection to return its response to the client, improving performance.",performance,POS,performance,POS 
+"The memory overhead is roughly constant, the speed overhead is negligible (and faster than any similar monitoring you could likely implement), as is the contention overhead of Cache.stats().",performance,POS,performance,POS 
+"However, we can say that if our list is an instance of RandomAccess interface, then definitely Lists.partition(lists, pivot); is faster.",performance,POS,performance,POS 
+This is a pretty efficient way because Booleans.asList returns a wrapper for the array and does not make any copies.,performance,POS,performance,POS 
+"Note that it uses sets under the hood, so it is as efficient as using Guava's Sets.difference as it was suggested.",performance,POS,performance,POS 
+Random.nextInt(n) is both more efficient and less biased than Math.random() * n,performance,POS,performance,POS 
+"I've checked, StringUtils.replaceEach does use a buffer and should be relatively memory efficient.",performance,POS,performance,POS 
+"If, instead you have a very long dictionary, applied to a short text, the linear search as done by StringUtils.replaceEach() can be faster than it.",performance,POS,performance,POS 
+The spring.properties file resolves performance issue with spring-jdbc version 5.0.1.,performance,POS,performance,NEG 
+The Optional.ofNullable is a null-safe way of creating an Optional object and you can do what you want to do in the lambda expression.,reliability,POS,reliability,POS 
+"Main.java required no extra configuration, just the SpringApplication.run() line.",usability,POS,usability,NEG 
+"It's very easy, using jersey-client, just include this maven dependency:",usability,POS,usability,POS 
+A simple and elegant way is to use a fixed thread pool and Guava's ListenableFuture on which you can call Futures.successfulAsList:,functional,POS,usability,POS 
+"Which, since you use Guava, is easy: use Ordering.sortedCopy().",usability,POS,usability,POS 
+An easy way to create such an inverted map would be to use Guava's Multimap for the initial map (state -> cities) and then use Multimaps.invertFrom(intialMap);.,usability,POS,usability,POS 
+"You can use Optional.orElse, it's much simpler than checking isPresent:",usability,POS,usability,POS 
+"You could perform the multiplication before casting - ((int)(Math.random()*size)), but really it'd be easier to use Random.nextInt(int).",usability,POS,usability,POS 
+Although you can use Multimaps.asMap(ListMultimap) it may be easier to use the Multimap directly.,usability,POS,usability,POS 
+"(p.s. I use Guava, but those calls (Objects.equals, Preconditions.checkArgument) are easy to replace if necessary.)",usability,POS,usability,POS 
+"First, I would prefer Random.nextInt(int) because it's easier to read (and use).",usability,POS,usability,POS 
+"Then you can scroll the view on the widget with Document.get().getElementById(""scrollPanelFooter"").scrollIntoView(); It's simpler!",usability,POS,usability,POS 
+You can easily solve this problem by using JSON.stringify() and later JSON.parse().,functional,POS,usability,POS 
+"I guess there is a more elegant way to do that in Java, by using the provided Filters in the MongoDB Java Driver (version 3 and above):",functional,POS,usability,POS 
+"Then you can scroll the view on the widget with Document.get().getElementById(""scrollPanelFooter"").scrollIntoView(); It's simpler!",usability,POS,usability,POS 
+"If so, then perhaps your file upload code could be more easily tested using Spring's MockMvcRequestBuilders#fileUpload(String, Object...) to return a MockMultipartHttpServletRequestBuilder.",usability,POS,usability,POS 
+"If you are using spring-boot you might as well drop the @ComponentScan annotation, as there is one already defined in the @SpringBootApplication annotation.",usability functional,POS POS,functional,POS 
+"With ASM, the actual transformation will look much simpler than you anticipating, e.g. you can use Type.getOpcode() to get instruction opcode for your new type.",usability functional,POS POS,functional,POS 
+"You could simply use your IDE to generate a Java hashCode method for your objects, then use the HashCode.fromInt() factory method to build the google HashCode object. This will be much faster then serializing a string and using a cryptographic hash. Whichever option you go with, you need to make sure that the hashcode you build will be the same when the object has the same data in it. For example hashing the result of the toString method wont work, unless you are overriding the method and providing a textual representation of all your objects data.",performance functional,POS POS,performance,POS 
+"To get an instance of StorageSerializer, you should use GWT.create(StorageSerializer.class);",functional usability,POS POS,functional,POS 
+But It did not worked for me with my spring-boot version.,none,,compatibility,NEG
+"A last one, but I'm unsure whether it'd work: you could use an if/else using GWT.isClient(), and annotate your ServerFacadeImpl with @GwtIncompatible to tell the GWT compiler that you know it's not client-compatible.",none,,compatibility,NEG 
+"The other version of the function, Random.nextInt(int), works around this by using different bits in this case (emphasis mine):",non,,compatibility,POS 
+There is also a JdbcUtils#commonDatabaseName method that attempts to normalize the database product names - http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/jdbc/support/JdbcUtils.html#commonDatabaseName-java.lang.String-,non,,compatibility,POS 
+If you read the javadoc for Random.nextInt(int) it says:,none,,documentation,POS 
+"If the Document is of type AbstractDocument and has a value returned by AbstractDocument.getAsynchronousLoadPriority that is greater than or equal to zero, the page will be loaded on a separate thread using that priority.",non,,documentation,POS 
+"If the Document is of type AbstractDocument and has a value returned by AbstractDocument.getAsynchronousLoadPriority that is greater than or equal to zero, the page will be loaded on a separate thread using that priority.",non,,documentation,POS 
+With spring-boot 1.5.3 you should use the following code in application.yml,none,,functional,POS 
+With spring-boot it could be done in application.properties.,none,,functional,POS 
+If you are using spring-boot you can use this kind of configuration:,none,,functional,POS 
+"The main method is only executed when the application is run standalone. It is recommended to run spring-boot apps standalone rather than via an external servlet container, but it is possible to support both methods simultaneously.",none,,functional,POS 
+[FATAL] Non-parseable POM C:\Users\Sriram.m2\repository\org\springframework\boot\spring-boot-parent\1.5.1.RELEASE\spring-boot-parent-1.5.1.RELEASE.pom: in epilog non whitespace content is not allowed but got r (position: END_TAG seen ...\n\nr...,non,,functional,NEG 
+"If you are using Java 1.7+, you can use ThreadLocalRandom.current() rather than Random.",none,,functional,POS 
+Alternatively you can get rid of the jersey-media-json-jackson artifact and use jackson-jaxrs-json-provider instead.,non,,functional,POS 
+"This explains why it is not possible with JSR-310/Threeten to write an expression like ZoneId.of(""A"").",non,,functional,NEG 
+"Assuming that ""webclient"" is your WAR application have u exported or included the gwt-user jar in your app on deploying to Glassfish: gwt-user-xxx.jar ? If you use Eclipse you can use the Deployment Assembly or just locate the jar into the lib location of the war.",none,,functional,POS 
+"The servlet specifications allow a servlet container not to explode a war file, prodided it is able to correctly serve resources through ServletContext.getResourceAsStream(java.lang.String path)",none,,functional,POS 
+It may make more sense to use Guava's ImmutableList.copyOf(list) or Collections.unmodifiableList(list) (though the latter would still let the list change if the Module creator changes the passed-in list later).,none,,functional,POS 
+"If you need to configure your caching behavior more than Suppliers.memoize() or Suppliers.memoizeWithExpiration() can provide, consider this similar pattern, which hides the fact that you're using a Cache inside a Supplier:",non,,functional,POS 
+"If you're stuck at Java 7 and don't want to include Google Guava, you can write your own (read-only) Iterables.concat() using no more than Iterable and Iterator:",non,,functional,POS 
+"You are not supposed to call get on an Optional because there might be not result and a NoSuchElementException will be thrown which makes as bad as NPE, you can use Optional.map or Optional.isPresent instead.",none,,functional,POS 
+"Since you're using Objects.hashCode(), you might as well use Objects.hash():",non,,functional,POS 
+"If you use Optional.ofNullable then you can just return null for what2, which is the only valid value for Void.",none,,functional,POS 
+Edit 2: It seems from this answer that in Java 9 I will be able to avoid the call to Optional.get() if instead of map() I use flatMap() and instead of get() I use stream().,none,,functional,POS 
+The reason for this is that Optional isn't special from the point of view of the type system: we know that Optional only has a provider method (Optional.get()) and that it has no consumer methods (like Optional.set(T)); but the compiler doesn't.,non,,functional,POS 
+"Throws IllegalStateException - if this request is within the scope of a filter or servlet that does not support asynchronous operations (that is, isAsyncSupported() returns false), or if this method is called again without any asynchronous dispatch (resulting from one of the AsyncContext.dispatch() methods), is called outside the scope of any such dispatch, or is called again within the scope of the same dispatch, or if the response has already been closed",non,,functional,NEG 
+"If you use Optional.ofNullable then you can just return null for what2, which is the only valid value for Void.",none,,functional,POS 
+Edit 2: It seems from this answer that in Java 9 I will be able to avoid the call to Optional.get() if instead of map() I use flatMap() and instead of get() I use stream().,none,,functional,POS 
+If you are using core mongo-java-driver then you can have a look at this and this SO answers to do the same operations.,non,,functional,POS 
+The reason for this is that Optional isn't special from the point of view of the type system: we know that Optional only has a provider method (Optional.get()) and that it has no consumer methods (like Optional.set(T)); but the compiler doesn't.,non,,functional,POS 
+"It shall be auto ""Decoded"" and you don't need explicit decoding using URLDecoder.decode(customerName, ""UTF-8"");",non,,functional,POS 
+"Note that ThreadLocalRandom.nextInt() has no fast-path like RandomUtils.nextInt(), so if you want to keep it, use:",none,,performance,POS 
+"If not, provide the correct time zone there, for example ZoneId.of(""Europe/Paris"") for CET.",non,,performance,POS
+"So I suppose your best bet is to find out what is the correct time zone ID for the time zone that your legacy code is trying to give you, and then get your ZoneId from ZoneId.of(String).",non,,performance,POS
+"If you want yesterday’s date in another time zone, in the first line of the snippet (and only the first line) use for example ZoneOffset.ofHours(8), ZoneId.of(""Asia/Hong_Kong"") or ZoneId.systemDefault() as time zone.",non,,performance usability,NEG POS 
+"As ImmutableList.copyOf() will try to avoid making a copy when it's safe to do so, this won't actually create a new copy so there isn't much point putting it in.",none,,reliability,NEG 
+"However, since its return value is in the same range as Random.nextDouble, which it also links to in the ""See Also"" section, it should be a safe assumption that that is what is used.",none,,reliability,POS 
+"Without seeing your code, or knowing your spring-boot version, it's difficult to really diagnose your issue.",none,,usability,NEG 
+You are creating the instance of the SearchController yourself in the line mockMvc = MockMvcBuilders.standaloneSetup(new SearchController()).build();.,non,,usability,POS 

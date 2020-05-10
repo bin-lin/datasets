@@ -1,0 +1,258 @@
+sentence,oracle_aspect,oracle_sentiment,predicted_aspect,predicted_sentiment
+"D'oh, it looks like it's not possible (or rather, not as easy): JsoSplittable is marked @GwtScriptOnly which makes it unusable in DevMode (and probably what causes the exception).",usability,NEG,reliability,NEG
+"I'm getting the following error when using an CODETERM1 to de-serialize an object: 
+JSONMappingException Can not construct instance of org.springframework.data.Page, problem: abstract types can only be instantiated with additional type information.",reliability,NEG,reliability,NEG
+I'm working with GWT and I'm getting a CODETERM1 Exception at runtime when I try to parse JSON.,functional,NEG,reliability,NEG
+It is a bug in jersey?Is there a way to make it always serialize as an array?,reliability,NEG,reliability,NEG
+"It seems that when Spring used Jackson to serialize one of my hibernate entities into it's JSON version, hibernate was trying to lazy load one of that entity's properties, but since the entity was outside of its transaction at that point (being ""in"" the controller), it caused an exception, which just got swallowed up.",reliability,NEG,reliability,NEG
+Must be some kind of problem with serializing/deserializing of JSONObjects in jersey.,reliability,NEG,reliability,NEG
+Serializing Jersey exceptions from filter throws error.,reliability,NEG,reliability,NEG
+"The problem is that due to bi-directional relationships and a self relationship (employee reportsTo employee), I am receiving a JsonMappingException: Infinite recursion I tried using @JsonIgnore but spring/jackson still attempt to include the attributes ( URL_http://stackoverflow.com/questions/3325387 [Infinite- Recursion-with-Jackson-JSON-and-Hibernate-JPA-issue] ) Any idea why CODETERM1 is not kicking in?",reliability,NEG,reliability,NEG
+"There's not a ""problem"" with Jersey or Gson ... the web service is basically broken and not returning consistently.",reliability,NEG,reliability,NEG
+This is adapted from a bug report for Jackson here: URL_https://jira.springsource.org/browse/SPR-10552 [ URL_https://jira.springsource.org/browse/SPR-10552 ] CODESNIPPET_JAVA1 .,reliability,NEG,reliability,NEG
+I hope this is not a Jackson or Jersey bug.,reliability,NEU,reliability,POS
+problem is fixed with the jersey-bundle-1.8.jar file.,reliability,POS,reliability,NEG
+This problem is fixed with jersey-bundle-1.8.jar .,reliability,POS,reliability,NEG
+"Being relatively new to Jersey, I am sure this problem has been solved.",none,,reliability,NEG
+"But when running it I am getting ""SEVERE: Allocate exception for servlet Jersey REST Servicejava.lang.ClassNotFoundException: org.json.JSONArray"".",none,,reliability,NEG
+Could this be a bug in the gwt dev mode?,none,,reliability,NEG
+Error 406 in a simple request using Spring 3 and Jackson 1.9.,none,,reliability,POS
+"Error:
+
+TypeError: Cannot read property 'length' of undefined at java_math_BigDecimal_$initFrom__Ljava_math_BigDecimal_2Ljava_lang_String_2 How to handle BigDecimal into GWT while deserializing with AutoBean?",none,,reliability,NEG
+Getting the following exception on trying to make get request from a GWT servlet.,none,,reliability,NEG
+How can I intercept a parse error in my Jersey REST application?,none,,reliability,NEG
+I have added jersey-json dependency but the problem's still the same.,none,,reliability,NEG
+So my question is whether these log messages indicate a (potential) problem with the way we are configuring or using Jersey.,none,,reliability,NEG
+The problem must be in Jersey's serialization...,none,,reliability,NEG
+"Unfortunately, if I take the above JSON and try to de-serialise it back into my object model, I get the following exception: 
+Could not read JSON: Could not resolve type id 'creditCardPayment' into a subtype of [simple type, class Payment] at [Source: org.apache.catalina.connector.CoyoteInputStream@19629355; line: 1, column: 58] (through reference chain: Order[""payment""]); nested exception is com.fasterxml.jackson.databind.JsonMappingException: Could not resolve type id 'creditCardPayment' into a subtype of [simple type, class Payment] at [Source: org.apache.catalina.connector.CoyoteInputStream@19629355; line: 1, column: 58] (through reference chain: Order[""payment""]) My application is configured via Spring JavaConf, as follows: CODESNIPPET_JAVA3 .",none,,reliability,NEG
+I looked all over the GWT docs and 'the Googles' to see if AutoBeans even has polymorphic support but couldn't get an answer either way.,documentation,NEG,community,POS
+Apache Jersey has decent JAXB support.,compatibility,POS,community,POS
+Tools used: Spring-Roo: for rapid prototyping ( URL_http://projects.spring.io/spring-roo/ [ URL_http://projects.spring.io/spring-roo/ ] ) Spring Tool Suite Spring Maven Tomcat SqlServer Hibernate All of these tools work really well together to develop a web service.,compatibility functional,POS POS,compatibility,POS
+"An alternate solution (works with spring 3.1), which is less invasive in your spring config : CODESNIPPET_JAVA1 .",none,,compatibility,POS
+"BTW, I'm working with Spring MVC.",none,,compatibility,POS
+It seems on official jersey site ( URL_http://jersey.java.net/nonav/documentation/latest/json.html ) the documentation is pretty old.,documentation,NEG,documentation,POS
+"URL_http://www.springsource.org/spring-data/rest [Spring-data-rest] is currently RC1 (heading for GA July 16), but the documentation is still a little sketchy.",documentation,NEG,documentation,NEG
+As suggested here: URL_http://stackoverflow.com/questions/1601992/spring-3 -json-with-mvc [Spring-3-JSON-with-MVC] checkout this website: URL_http ://spring-json.sourceforge.net/ [ URL_http://spring-json.sourceforge.net/ ] It has perfectly nice working example on how to do this in spring framework.,functional,POS,documentation,POS
+"EclipseLink JAXB (MOXy) offers support for all JAXB constructs in our JSON- binding implementation and it may be a better fit for you use case: 
+URL_http://blog.bdoughan.com/2012/05/moxy-as-your-jax-rs-json-provider.html [ URL_http://blog.bdoughan.com/2012/05/moxy-as-your-jax-rs-json-provider.html ] Below is a link to some official Jersey examples that leverage MOXy as the JSON provider: 
+URL_https://github.com/jersey/jersey/blob/master/examples/json-moxy/README.html [ URL_https://github.com/jersey/jersey/blob/master/examples/json-moxy/README.html ] .",functional,POS,documentation,POS
+"For new version of Maven, if you have dependency problems, here is a good official reference: URL_https://jersey.java.net/documentation/latest/modules- and-dependencies.html#d0e383 [ URL_https://jersey.java.net/documentation/latest /modules-and-dependencies.html#d0e383] (Section 2.3.1, 2.3.2) And also here is a good tutorial for installing maven and tuto of Jersey in eclipse: URL_http://javaposts.wordpress.com/2012/01/14/maven-rest-jersey- eclipse-tutorial/ [ URL_http://javaposts.wordpress.com/2012/01/14/maven-rest - jersey-eclipse-tutorial/] CODESNIPPET_JAVA1 .",documentation,POS,documentation,POS
+"I'd like to configure the JSON output using a CODETERM1 as suggested in several questions here on SO, as well as in the URL_http://jersey.java.net/nonav/documentation/latest/user-guide.html#d4e934 [Jersey-User-Guide] .",documentation,POS,documentation,POS
+"If you are using the URL_http://jersey.java.net/nonav/documentation/latest/jso n.html#json.jaxb.approach.section [JAXB] approach, you can mark fields with CODETERM1 to omit them.",functional,POS,documentation,NEG
+"This is explained in the documentation on the ""Update"" command: URL_http://www.mongodb.org/display/DOCS/Updating#Updating- update%28%29 [ URL_http://www.mongodb.org/display/DOCS/Updating Updating
+update%28%29] Unfortunately, I am not familiar with the Spring framework, so I am unable to tell you how to do this with the ""mongoOperations"" class.",documentation,POS,documentation,NEG
+This manual could be useful for you: URL_http://jersey.java.net/nonav/documentation/latest /json.html#json.jaxb.approach.section [link] .,documentation,POS,documentation,POS
+"URL_http://jersey.java.net/nonav/documentation/latest/user-guide.html#d4e928 [jersey-official-document] has detailed config: To achieve more important JSON format changes, you will need to configure Jersey JSON procesor itself.",documentation,POS,documentation,POS
+"I have also faced below error once 
+The resource identified by this request is only capable of generating responses with characteristics not acceptable according to the request ""accept"" headers () I have followed URL_http://krams915.blogspot.com/2011/02/spring-3-rest-web- service-provider-and.html [ URL_http://krams915.blogspot.com/2011/02/spring-3-rest - web-service-provider-and.html] tutorial.",none,,documentation,NEG
+"see this : URL_https://jersey.java.net/documentation/latest/media.html json
+- And these are the easier solutions !.",none,,documentation,POS
+URL_http://docs.spring.io/spring/docs/3.2.x/spring-framework- reference/html/validation.html#format [This-is-described-in-the- deocumentation] .,none,,documentation,POS
+GWT: conflicting classes in the gwt-user.jar.,compatibility,NEG,functional,NEG
+"I thought about two options (well, service is an overloaded term): 
+everything that is mentioned in these JSON GWT tutorials is about the third-party services, like GData and Yahoo!",documentation,NEG,functional,POS
+I'm about to setup a REST-Webservice with Jersey.At the moment I am a bit confused about the correct representation of Strings or other Value types in JSON.Here are two snippets: CODESNIPPET_JAVA1 .,usability,NEG,functional,NEG
+"There are two Java libraries with DataTable objects: [GWT DataTable]( URL_http://code.google.com/p/gwt-google-apis/source/browse/trunk/visual ization/visualization/src/com/google/gwt/visualization/client/DataTable.java?r 1153)
+and [Java Datasource Library DataTable]( URL_http://code.google.com/apis/cha rt/interactive/docs/dev/dsl_javadocs/com/google/visualization/datasource/datat able/DataTable.html).",functional,NEU,functional,NEG
+"I have good experience with Jersey, which is the reference implementation of jax-ws.",functional,POS,functional,POS
+"Jersey is the reference implementation of JAX-RS, a web services standard.",functional,POS,functional,POS
+URL_http://mojo.codehaus.org/gwt-maven-plugin/compile-mojo.html [maven-gwt- plugin] with parameter URL_http://mojo.codehaus.org/gwt-maven-plugin/compile- mojo.html#compileSourcesArtifacts [compileSourcesArtifacts] will do all sources management work and will let you to compile GWT module.,functional,POS,functional,NEG
+"yes, SmartGWT expects a specific JSON format.",functional,POS,functional,POS
+"""The request sent to the client was syntactically incorrect"" means there is something wrong with the content of the request you sent, not necessarily your controller or Spring configuration.",none,,functional,NEG
+(from URL_http://code.google.com/p/google - web-toolkit/source/browse/trunk/user/src/com/google/gwt/json/client/JSONParser .java ).,none,,functional,NEG
+(or even jersey 1.x).,none,,functional,POS
+400 Bad request on Spring ajax call.,none,,functional,NEG
+"After a quick comparison, I found: 
+Resting
+v0.7: resting-0.7-dev-release-android.jar - 1.3MB
+(all-in-one according tothe doc) 
+Restlet
+v2.1.2: org.restlet.jar - 728KB
+(however must 
+1MB after adding httpclient extention and json extention) 
+Spring
+for Android** v1.0.1: spring-android-core-1.0.1.RELEASE.jar 113KB + spring-android-rest-template-1.0.1.RELEASE.jar 186KB + gson-2.2.3.jar 194KB 
+493KB
+(without auth support, otherwise spring social will be a dependency) Please correct me if any miss.",none,,functional,POS
+An important architectural difference is that GWT-RPC operates at a more functional level.,none,,functional,POS
+"Digging into jersey source code I noticed the class ""WadlGeneratorJAXBGrammarGenerator"" the following code : CODESNIPPET_JAVA1 .",none,,functional,NEG
+GWT: working with JSON services.,none,,functional,POS
+Here's my actual client (a Jersey based Restful Web Service): CODESNIPPET_JAVA4 .,none,,functional,NEG
+I am working on a jersey web services.,none,,functional,POS
+I am working on Spring MVC project.,none,,functional,POS
+I have a Jersey client that is successfully calling a REST service and populating the associated Java Beans CODETERM1 based on this code: CODESNIPPET_JAVA1 .,none,,functional,POS
+"I have good experience with Jersey and Jackson, even with Android, JBoss or Tomcat.",none,,functional,POS
+if you want to gson on client side then you have to try this library URL_https://github.com/heroandtn3/bGwtGson .,none,,functional,POS
+In Spring MVC controller the URL handler looks like this: CODESNIPPET_JAVA2 .,none,,functional,POS
+"On PUT request, I am getting following exception: 
+org.springframework.http.converter.HttpMessageNotReadableException: Could not read JSON: Unrecognized field ""property"" (Class domain.Property), not marked as ignorable at [Source: org.apache.catalina.connector.CoyoteInputStream@75280b93; line: 1, column: 14] (through reference chain: domain.Property[""property""]); CODESNIPPET_JAVA1 .",none,,functional,NEG
+please improve your question by adding java as a tag and including 'Jersey API' in the title.,none,,functional,POS
+Take a look at URL_http://spring-json.sourceforge.net/ [Spring-Json-view] and the CODETERM1 class.,none,,functional,NEG
+Take look at this: URL_http://spring-json.sourceforge.net/quick_simpleform.html [ URL_http://spring - json.sourceforge.net/quick_simpleform.html] You have to create file views.xml in yoru WEB-INF direcotry with this content: CODESNIPPET_JAVA2 .,none,,functional,NEG
+"Try setting the content type header: 
+postMethod.addRequestHeader(""Content-Type"", ""application/json""); Btw, I strongly recommend URL_http://jersey.java.net/ [Jersey] .",none,,functional,POS
+"URL_http://blog.springsource.com/2010/01/25/ajax-simplifications-in- spring-3-0/ [ URL_http://blog.springsource.com/2010/01/25/ajax-simplifications-in - spring-3-0/] Update:
+just checked my working code where I have @RequestBody working correctly.I also have this bean in my config: CODESNIPPET_JAVA2 .",none,,functional,POS
+URL_http://static.springsource.org/spring/docs/current/javadoc- api/org/springframework/web/bind/annotation/RequestParam.html [CODETERM1] annotation is crucial.,none,,functional,NEG
+Which one is good Java or Json in GWT client?,none,,functional,POS
+Yeap I did add the mapping bit com.sun.jersey.api.json.POJOMappingFeature true .,none,,functional,POS
+"Finally you can use CODETERM6 as well, but it can have some performance issues.",performance,NEG,performance,POS
+"I'm using GWT to build an application, and I'm facing serious speed issues with something that I thought would be pretty fast.",performance,NEG,performance,POS
+Slow iteration through a JSONArray in GWT.,performance,NEG,performance,NEG
+"Also, even without knowing this, users often ditch jettison as soon as they have tried Jackson (""pure"" JSON) approach, and I think CXF also supports Jacksons (Jersey and RESTeasy do for sure).",compatibility,NEU,performance,POS
+"GSON is indeed a very popular library, but for example, Jackson has a large installed base due to its inclusion as default JSON library in both RESTEasy and Jersey.",community,POS,performance,POS
+"I don't know enough about Spring to know about ModelAndView part, but I know enough about Jackson to say that the performance is unlikely to be problematic for Jackson filtering.One reason why filtering approaches are not trivially simple is because they try to balance usability with performance -- and as such, both JSON Views and Filters have very low overhead.",performance,POS,performance,POS
+"In GWT 2.1, CODETERM10 became deprecated and two more methods were introduced - CODETERM11 (uses CODETERM12 internally) and CODETERM13 (the safe approach).",functional,POS,performance,NEG
+"But when running it I am getting ""SEVERE: Allocate exception for servlet Jersey REST Servicejava.lang.ClassNotFoundException: org.json.JSONArray"".",reliability,NEG,usability,NEG
+Dependencies Remove both CODETERM1 (this module doesn't exist any more in Jersey 2.x) and CODETERM2 (which is only for Jersey 1.x) and add one of the modules CODETERM3 (JAXB) or CODETERM4 (POJO).,compatibility,NEG,usability,POS
+Error when trying to convert JSON to POJO using Jersey.,reliability,NEG,usability,NEG
+For a while the following bug existed in Jersey that prevented MOXy from being used in this way which may be what you are hitting now.,reliability,NEG,usability,NEG
+"I don't know why this isn't the default setting, and it took me a while figuring it out, but if you want working JSON conversion with Jersey, add CODESNIPPET_JAVA1 .",usability,NEG,usability,POS
+I tried to map a different method to a specific URL CODETERM4 but Jersey was not happy to serve that.,usability,NEG,usability,NEG
+"I use Google App Engine and have struggled a lot with this also, if you use jersey-bundle-1.17.jar most of the stuff work until you add CODESNIPPET_JAVA1 .",usability,NEG,usability,NEG
+I was pulling my hair out trying to figure out why the URL_https://src.springframework.org/svn/spring-samples/mvc-ajax/trunk/ [mvc- ajax] app worked without any special config for the CODETERM2 .,usability,NEG,usability,POS
+"I was using Jersey and Guice so was a little hard to find out how, but I did it.",usability,NEG,usability,NEG
+"I'm trying to use CODETERM1 with Spring 3.0, without success.",usability,NEG,usability,POS
+"I'm using GWT to build an application, and I'm facing serious speed issues with something that I thought would be pretty fast.",performance,NEG,usability,POS
+"I'm using Jersey in the server side REST Web service, I only get the error when the List returned one single element and when it has CODETERM1 I get CODETERM2 But when it has more than one it works perfectly, and this is how I'm doing it : CODESNIPPET_JAVA1 .",reliability,NEG,usability,POS
+"i'm working on a project for university, wich makes me mad.I need to develop a webservice with jersey, but every request sends me just this CODESNIPPET_JAVA1 .",functional,NEG,usability,POS
+"I've bean looking at the CODETERM4 MongoDB driver object or using the GSON (Google) lib, but I am lacking the pattern for how to do this.",usability,NEG,usability,NEG
+"If you can't tell by my other spring related questions, I'm kind of flying blind, and can't figure out the proper google query for this one.",usability,NEG,usability,NEG
+"If you really have to use CODETERM14 , then I'd suggest upgrading to GWT 2.1 M2, because otherwise you might as well use JSOs.",compatibility,NEG,usability,POS
+"Im developing web application using springMVC 3.2.6 and Hibernate 3.3.1 when I mapped a spring URL pattern as CODETERM1 and request a URL is CODETERM2 the method is working fine as checked in debug mode and CODETERM3 but the JSON is not generated and the output shows as 
+The resource identified by this request is only capable of generating responses with characteristics not acceptable according to the request ""accept"" headers ().",usability,NEG,usability,POS
+"On the other hand, if you're using the Jersey JSON plugin, you'd have to write a subclass of CODETERM2 , and add JAXB annotations to it - kind of a pain in the ass.",usability,NEG,usability,NEG
+"Right now I'm working with a project in Spring MVC with RESTful,I have some problems with URL's containing more than one of the same parameter I would like to request something like: CODESNIPPET_JAVA1 .",usability,NEG,usability,POS
+"Thanks I had this problem for quite a while, I saw somewhere in the jersey documenation that it would scan the classpath for providers and the JacksonProvider would be automatically discovered but this appears to be incorrect.",documentation,NEG,usability,NEG
+"This appears to be exactly what I'm after, though either it doesn't appear to be working for me or for some other reason Spring is choosing a different MappingJacksonHttpMessageConverter instance than that of which I've created.",usability,NEG,usability,POS
+"This seems to be a strange use case for MongoDB, it could be stored like this: CODESNIPPET_JAVA1 .",usability,NEG,usability,POS
+"To pass your specialized JSONJAXBContext to Jersey, you will finally need to implement a JAXBContext ContextResolver: CODESNIPPET_JAVA1 .",usability,NEG,usability,POS
+"URL_http://stackoverflow.com/questions/3121252/spring-mvc-ajax-and-json-using- custom-view-resolver-and-custom-view [ URL_http://stackoverflow.com/questions/3121252/spring-mvc-ajax-and-json-using - custom-view-resolver-and-custom-view] Here I've gotten a view to display JSON by adding "".json"" to the end of a URL, but using this method a visitor to the site can just put .json at the end of any URL they please and often it will result in an exception that gives too much information regarding the back end code.",functional,NEG,usability,NEG
+"Well first of all, I think that Jersey is doing the wrong thing here, since Content-Type is a header that describes the content of the request/response and you aren't including any content with the request, it should actually be basing its behaviour on the Accepts header instead, but leaving that aside.... Just because it's an ajax call, it doesn't mean that the content-type will always be /, on the client you can call setRequestHeader like so: CODESNIPPET_JAVA1 .",usability,NEG,usability,NEG
+"I'm using jersey and jackson together to develop my REST API, and I'm having a problem when deserializing date string.",functional usability,NEG NEG,usability,NEG
+URL_https://java.net/jira/browse/JERSEY-753 [ URL_https://java.net/jira/browse/JERSEY-753 ] This method of producing JSON has some limitations and may not be what your ultimately want.,functional reliability,NEG NEG,usability,POS
+"As an alternative to CODETERM15 for untrusted sources, you could try integrating URL_http://stackoverflow.com/questions/3449099/parse-json-with-gwt-2-0/3449658#3449658 [json2.js-as-a-JSON-parser-via-JSNI] .",functional,NEU,usability,NEG
+I am looking for an efficient way to convert a CODETERM1 into a form I can send via GWT-RPC that can be part of a GWT server-client communication in general.,functional,NEU,usability,POS
+In MongoDB (and noSQL in general) the schema structure should reflect the queries you will need to run against them.,functional,NEU,usability,NEG
+web.xml Remove CODETERM5 and CODETERM6 which are Jersey 1.x specific and have no use in Jersey 2.x.,compatibility,NEU,usability,POS
+"An alternate solution (works with spring 3.1), which is less invasive in your spring config : CODESNIPPET_JAVA1 .",usability,POS,usability,POS
+And as a bonus with jersey you only need to have genson in your classpath and voila!,usability,POS,usability,POS
+As I'm using Spring 3 (that adopts Jackson in its default Json view ' URL_http://static.springsource.org/spring/docs/3.0.0.RC2/javadoc- api/org/springframework/web/servlet/view/json/MappingJacksonJsonView.html [JacksonJsonView] ') it was more natural for me to do the same.,usability,POS,usability,NEG
+"For new version of Maven, if you have dependency problems, here is a good official reference: URL_https://jersey.java.net/documentation/latest/modules- and-dependencies.html#d0e383 [ URL_https://jersey.java.net/documentation/latest /modules-and-dependencies.html#d0e383] (Section 2.3.1, 2.3.2) And also here is a good tutorial for installing maven and tuto of Jersey in eclipse: URL_http://javaposts.wordpress.com/2012/01/14/maven-rest-jersey- eclipse-tutorial/ [ URL_http://javaposts.wordpress.com/2012/01/14/maven-rest - jersey-eclipse-tutorial/] CODESNIPPET_JAVA1 .",documentation,POS,usability,POS
+GWT actually has built in classes for working with JSON in the CODETERM1 package.,functional,POS,usability,POS
+"I am now using java method com.mongodb.util.JSON.parse(param) to convert my json string to a DBObject.I find that, in most cases , for example , when the key in the json string is simple type like string or int ,it can be used by both JSON.parse() method and terminal.For example: CODESNIPPET_JAVA1 .",functional,POS,usability,POS
+"I have a Java application which uses Spring's RestTemplate API to write concise, readable consumers of JSON REST services: In essence: CODESNIPPET_JAVA1 .",usability,POS,usability,POS
+I have just started using Jackson because of the integration with the Spring Framework and have run into an issue with single quotes in a value.,compatibility,POS,usability,POS
+"I have used happily Jersey/JAX-RS but I would suggest you Spring
+MVC 3**, not only for the rest api support but also for other interesting stuff as IoC or beans that could turn out to be useful.",functional,POS,usability,POS
+"I met this problem recently, and found an easier way (maybe it's the support of Spring 3) CODESNIPPET_JAVA1 .",usability,POS,usability,POS
+I think you can change the JSON property inside spring config file like this: CODESNIPPET_JAVA1 .,functional,POS,usability,POS
+"I would look into any of the following frameworks or libraries to create REST APIs with java and/or scala: 
+URL_http://www.playframework.com/ [Play-Framework] 
+URL_http://vertx.io/ [Vert.x] 
+URL_http://spray.io/ [Spray] 
+URL_http://dropwizard.codahale.com/ [Dropwizard] (which uses Jetty, Jersey, and Jackson) .",functional,POS,usability,POS
+"I'd like to configure the JSON output using a CODETERM1 as suggested in several questions here on SO, as well as in the URL_http://jersey.java.net/nonav/documentation/latest/user-guide.html#d4e934 [Jersey-User-Guide] .",documentation,POS,usability,POS
+"I'm pretty sure you only have to register URL_http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springfra mework/http/converter/json/MappingJacksonHttpMessageConverter.html [CODETERM1] (the easiest way to do that URL_http://static.springsource.org/spring/docs/current/spring-framework- reference/html/mvc.html#mvc-config-enable [is-through-CODETERM2-in-XML-or- CODETERM3-in-Java] ) See:
+
+URL_http://forum.springsource.org/archive/index.php/t-89618.html [this-forum-post] and 
+URL_http://static.springsource.org/spring/docs/current/spring-framework-reference/html/validation.html#format-configuring-formatting-mvc [7.6.5-Configuring-Formatting-in-Spring-MVC] 
+
+
+Here's a working example: Maven
+POM** CODESNIPPET_JAVA1 .",functional,POS,usability,POS
+"I've not tried with complex and low level with Map, you can go with doc CODETERM1 URL_https://github.com/heroandtn3/bGwtGson [bGwtGson] library .",documentation,POS,usability,POS
+"If I configure Spring properly, I can have Jackson serialize the return value from getIcon() into a JSON format, maybe something like CODETERM2 .",functional,POS,usability,POS
+"If I read the URL_http://docs.spring.io/spring/docs/4.0.x/javadoc-api/org/spri ngframework/http/converter/json/MappingJackson2HttpMessageConverter.html [MappingJackson2HttpMessageConverter-docs] correctly, Jackson JSON conversion is triggered by Content-Type CODETERM3 , which I obviously cannot use since this is a form POST (and I don't control the POSTing part).",documentation,POS,usability,POS
+"If you're on a recent Spring version, the following should be enough to get things rolling: CODESNIPPET_JAVA1 .",usability,POS,usability,POS
+"If your problem is just with Twitter, you can look for dedicated APIs like Twiiter4J or Spring Social, that should provides ready java beans for tweets.",functional,POS,usability,POS
+"In GWT 2.1, CODETERM10 became deprecated and two more methods were introduced - CODETERM11 (uses CODETERM12 internally) and CODETERM13 (the safe approach).",compatibility,POS,usability,NEG
+In my opinion the best way to communicate JSON with the server is using JAX-RS (or the Spring equivalent).,functional,POS,usability,POS
+"It might however need some tweaking/formatting, and here Spring takes care of marshalling your object into most appropriate type like JSON.",usability,POS,usability,POS
+"My question is, is there a Java API that persists such big objects in Cassandra?After searching, MongoDB seems to perform this very well, but I want to know if it can be made in Cassandra via some API.",performance,POS,usability,POS
+"Not the most interesting work, but at least its safer than just calling CODETERM6 on the whole JSON :) Attention:
+as Jason pointed out, prior to GWT 2.1, CODETERM7 used CODETERM8 internally (it only had a CODETERM9 method - URL_http://google-web-toolkit.googlecode.com/svn/javadoc/2.0/com/google/gwt/json/client/JSONParser.html [GWT-2.0] javadocs vs URL_http://google-web-toolkit.googlecode.com/svn/javadoc/2.1/com/google/gwt/json/client/JSONParser.html [GWT-2.1] ).",compatibility,POS,usability,POS
+"Now that my CODETERM7 is a Spring-managed bean, auto-wiring works!",functional,POS,usability,POS
+Now the issue: As soon as I run it in Spring framework I can write to standard out the entire file content that I have run via the stand alone code.,functional,POS,usability,POS
+Otherwise you just need to convert JSON to CODETERM1 and you can do this with URL_http://api.mongodb.org/java/current/com/mongodb/util/JSON.html#parse% 28java.lang.String%29 [JSON.parse()] method or any other JSON-mapping library like URL_http://jackson.codehaus.org/ [Jackson] .,functional,POS,usability,POS
+See URL_http://blog.springsource.org/2011/02/21/spring-3-1-m1-mvc-namespace- enhancements-and-configuration/ [Spring-3.1-MVC-Namespace-Improvements] See URL_https://jira.springsource.org/browse/SPR-7504?focusedCommentId=62730&p age=com.atlassian.jira.plugin.system.issuetabpanels%3acomment-tabpanel [SPR-7504] Make it easier to add new Message Converters to AnnotationMethodHandlerAdapter Exemple: CODESNIPPET_JAVA1 .,usability,POS,usability,POS
+"Simply serve your file data using GET and CODETERM1 using on of the factory methods of URL_http://docs.oracle.com/javaee/6/api/javax/ws/rs/core/Response.html [CODETERM2] (part of the JAX-RS API, so you're not locked into Jersey): CODESNIPPET_JAVA1 .",functional,POS,usability,NEG
+"Since property editors are a thing of the past as far as Spring is concerned, we are expected to use the new Conversion Service API.",functional,POS,usability,NEG
+Since spring-mvc 3.0 official support for Ajax remoting with JSON is provided as part of Spring MVC.,functional,POS,usability,POS
+Spring MVC integrates very well with Jackson for converting the POJO to json and back.,compatibility,POS,usability,POS
+"Spring MVC support for Jackson 2; also works with Jackson's native ""pretty print"" feature URL_https://gist.github.com/2423129 [ URL_https://gist.github.com/2423129 ] I haven't tried the CODETERM1 found in the gist above but it would surprise me if it did not work.",compatibility,POS,usability,POS
+Spring registers some converters that can convert a String value from a request parameters into a CODETERM10 object.,functional,POS,usability,POS
+"Spring will use reflection to do all of this, but the code it executes would essentially do this: CODESNIPPET_JAVA1 .",functional,POS,usability,NEG
+The easiest way seems to be to use a JSON library to parse the JSON strings into a CODETERM1 and then use the URL_http://api.mongodb.org/java/2.0/org/ bson/BSONObject.html#putAll%28java.util.Map%29 [CODETERM2] method to put those values into a CODETERM3 .,usability,POS,usability,POS
+The easiest way would be adding a dependency on URL_https://jersey.java.net/documentation/latest/media.html#json.moxy [MOXy] and JSON support would work _out-of-the-box_ (you don't need to explicitly register features the modules provides to make it work as opposed to other JSON modules in Jersey): CODESNIPPET_JAVA1 .,usability,POS,usability,NEG
+"The object I'd like to convert first represented data as a <LinkedList<LinkedList<String>>>, and I figured Jersey would just do the right thing.",functional,POS,usability,POS
+The serialization of the object using Jersey's Jackson default serializers with the added metadata will be the following... CODESNIPPET_JAVA2 .,functional,POS,usability,NEG
+This is what did the trick for me in Spring MVC 3.2.2 when trying to initialize CODETERM2 in Java.,functional,POS,usability,NEG
+Those changes will allow Maven to find the latest URL_http://in.relation.to/Bloggers/Hibernate361FinalRelease [Hibernate] and URL_http://www.springsource.org/documentation [Spring] libraries which are not always present in the default Maven repositories and also other libraries like the URL_http://hsqldb.org/ [HSQLDB] - an in-memory database used to test this example and JSON Java conversion.,functional,POS,usability,NEG
+URL_http://code.google.com/webtoolkit/doc/latest/DevGuideCodingBasicsOverlay.h tml [GWT-Coding-Basics---JavaScript-Overlay-Types] You can create overlay types pretty easily:- CODESNIPPET_JAVA1 .,usability,POS,usability,POS
+"URL_http://static.springsource.org/spring/docs/3.1.x/spring-framework- reference/html/new-in-3.1.html#d0e1650 [3.1.17-@Valid-On-@RequestBody- Controller-Method-Arguments] says that: 
+An CODETERM1 method argument can be annotated with CODETERM2 to invoke automatic validation similar to the support for CODETERM3 method arguments.",functional,POS,usability,POS
+When I mapped a spring URL pattern as CODETERM4 and request the url is CODETERM5 it gives perfect JSON output: CODESNIPPET_JAVA1 .,functional,POS,usability,POS
+With jersey the common way would be to define two simple java pojos and a simple Resource: CODESNIPPET_JAVA5 .,usability,POS,usability,POS
+"With whatever you are using to add dependencies (like Spring) to your project or web app, just add the Jackson libraries in the same way.",usability,POS,usability,POS
+You could use Jettison (coming with Jersey) and prepare the structure you would like to have yourself using CODETERM1 and CODETERM2 as return values.They are in the package CODETERM3 of CODETERM4 which is a transitive dependency of CODETERM5 .,functional,POS,usability,POS
+"You can deal with CODETERM4 easily in your java code, but if you prefer a CODETERM5 you need to write some extra code like this (taken from the URL_https://code.google.com/p/gwt-in-the- air/source/browse/trunk/src/net/ltgt/gwt/jscollections/client/JsArrays.java [jscollections] library).",usability functional,POS POS,usability,POS
+"Actions: After you have made sure that everything is done perfectly right and nothing is wrong with your Configuration nor you URL:- Run a maven clean.- Undeploy your web app or simply delete it.- Redeploy the web app- Make sure to use only one version of Spring in your maven/gradle 
+Scenario Two: CODESNIPPET_JAVA3 .",none,,usability,POS
+All I found is URL_http://forum.springsource.org/showthread.php?t=88803 [this- thread] which basically concludes with recommending to avoid bi-directional associations.,none,,usability,POS
+"And it seems like Jersey picked it up during start up:Jan 24, 2011 2:53:23 PM com.sun.jersey.api.core.ScanningResourceConfig logClassesINFO: Provider classes found: class com.mypackage.MyJsonProvider And it works fine for serialization, but when I tried to deserialize a string like ""2010-01-25 00:00:00"", I'm getting a mapping error: CODESNIPPET_JAVA2 .",none,,usability,POS
+"Below link would help you to solve your problem[customized bean converter i.e., you can add LongToString converter class and map it with MappingJacksonHttpMessageConverter][1] [1]: URL_http://stackoverflow.com/questions/7854030/configurating-objectmapper-in - spring.",none,,usability,NEG
+But the answer (for Jersey 2.2 + Jackson at least) was a more up-to-date provider CODESNIPPET_JAVA1 .,none,,usability,POS
+Does it actually make sense to encode the payload when Autobean already does it for me for each field (security wise)?BTW: URL_http://www.wijsmullerbros.nl/content/gwt-hostpage-init-data - encoding.,none,,usability,POS
+Does that Spring MVC controller only accept a request body in JSON format instead of the standard application/x-www-form-urlencoded like as standard forms and standard ajax requests send?,none,,usability,POS
+Error 406 in a simple request using Spring 3 and Jackson 1.9.,none,,usability,POS
+"Finally found answer from here: URL_http://stackoverflow.com/questions/2828968/mapping-restful-ajax-requests- to-spring [Mapping-restful-ajax-requests-to-spring] I quote: 
+@RequestBody/@ResponseBody annotations don't use normal view resolvers, they use their own HttpMessageConverters.",none,,usability,POS
+"Firstly, since we are using URL_http://blog.springsource.com/2009/03/08/rest- in-spring-3-mvc/ [Spring-content-negotiation] (scroll down to the CODETERM33 section) you will need to configure Poster to add the correct Content Type.",none,,usability,POS
+"However, the same jersey, when using to deserialize this data, is screaming the following: CODESNIPPET_JAVA2 .",none,,usability,NEG
+I am facing problem while sending an Image using Spring Web Service.,none,,usability,NEG
+"I am most familiar with Jersey, which exposes URL_https://jersey.java.net/nonav/apidocs/1.5/jersey/com/sun/jersey/api/client /ClientResponse.html#getEntityInputStream() [ URL_https://jersey.java.net/nonav/api docs/1.5/jersey/com/sun/jersey/api/client/ClientResponse.html#getEntityInputSt ream()] It would be used by invoking CODESNIPPET_JAVA1 .",none,,usability,NEG
+I am trying to parse JSON data being sent from UI in my Controller using Spring build Jackson support and this is my code CODESNIPPET_JAVA1 .,none,,usability,POS
+I am trying with simple Jersey + Json example but i get following error CODETERM1 i put following jar files for getting appropriate result CODESNIPPET_JAVA1 .,none,,usability,POS
+I created a new question for this that I'd like you to answer here: URL_http://stackoverflow.com/questions/18646747/how-to-produce-json-output-with - jersey-1-17-1-using-jaxb This can help others.,none,,usability,POS
+I did this configuration in my web.xml (as mentioned URL_http://jersey.java.net/nonav/documentation/latest/json.html#d4e878 [here] ): CODESNIPPET_JAVA1 .,none,,usability,NEG
+"i don't know about java mongo driver, but in URL_https://github.com/samus /mongodb-csharp [c#-mongo-driver] has BsonSerializer class.You can use it like following code: CODESNIPPET_JAVA1 .",none,,usability,POS
+"I found on the web the following code which is my starting point (Java and Spring 3), but I accept other/better approaches: The JSP (only relevant code shown): CODESNIPPET_JAVA1 .",none,,usability,NEG
+"I have a ajax posts a JSON to a server uses Jersey REST GET, but nothing is working, I'm wondering if its the right way to do it.Here is my previous questions with code regarding to the problem: code in java implements in the server: CODESNIPPET_JAVA1 .",none,,usability,POS
+I have included the libs shown in this screenshot: URL_http://i.stack.imgur.com/EJj5O.png [LIBS] And this is my web.xml (part of it) com.sun.jersey.api.json.POJOMappingFeature true The Jersey resource CODESNIPPET_JAVA3 .,none,,usability,POS
+"I know that Spring will deserialize JSON using Jackson to objects, but if I try something like the following: CODESNIPPET_JAVA1 .",none,,usability,POS
+"I would like to add as well that decoding JSON into your native language objects and then saving it down without any real validation is just asking to be hacked, this is the worst method of destroying any kind of injection protection MongoDBs native querying offers.",none,,usability,NEG
+"I'm getting the following error when using an CODETERM1 to de-serialize an object: 
+JSONMappingException Can not construct instance of org.springframework.data.Page, problem: abstract types can only be instantiated with additional type information.",none,,usability,NEG
+I'm working with Spring MVC 3 and trying to use my domain objects to return a json response.,none,,usability,POS
+"I've been in the same position as you - looking through the Spring docs for how to implement a simple JSON client
+API.",none,,usability,POS
+"If you are using the URL_http://jersey.java.net/nonav/documentation/latest/jso n.html#json.jaxb.approach.section [JAXB] approach, you can mark fields with CODETERM1 to omit them.",none,,usability,NEG
+In URL_http://docs.mongodb.org/ecosystem/drivers/java-types /#regular-expressions [Java] you have to use CODETERM2 like this: CODESNIPPET_JAVA1 .,none,,usability,POS
+Is there a way to build Spring Web calls that consume and produce application/json formatted requests and responses respectively?,none,,usability,POS
+Jersey Exception : SEVERE: A message body reader for Java class.,none,,usability,NEG
+Jersey POST Method is receiving null values as parameters.,none,,usability,POS
+Not getting JSON value in Spring Controller method.,none,,usability,POS
+Or can I be successful in just adding this Map adapter for Jersey to call?,none,,usability,POS
+"Or check your JSPs as this sounds like Spring found a controller to handle the request, but can't find a view?",none,,usability,POS
+Perhaps it only understands application/x-www-form-urlencoded bodies or you need to tell your Spring controller somehow that the request is in format of application/json?,none,,usability,POS
+Post your configuration... Also please specify which Spring and Jackson version you are using.,none,,usability,POS
+problem was that library jersey-jason was missing!,none,,usability,NEG
+"So far I have modified a simple Hello World example found URL_http://www.mkyong.com/spring-mvc/spring-3-rest-hello-world-example/ [here] In my Controller, I have this: CODESNIPPET_JAVA1 .",none,,usability,POS
+So it seems it's common sense to plug a CODETERM5 like mine into Jersey so I can tune the JSON to something I like.,none,,usability,POS
+Thanks in advance I used CODETERM3 as presented in this question : URL_http://stackoverflow.com/questions/16674207/jersey-serialize-empty-list- and-single-element-list-as-an-array [Jersey-serialize-empty-list-and-single- element-list-as-an-array] But I think the better way is to use CODETERM4 but the problem with this configuration that it working only for one Class and It is not resolving the issue with the empty list.,none,,usability,POS
+"The flow is that when receive a call to /entry.html, it will check and choose to 
+redirect to CODETERM1 
+handled by spring security and then redirect to CODETERM2 
+response JSON 
+resolve to view CODETERM3 , which is a jsp contain only a json string I would like to know if I can use CODETERM4 in CODETERM5 without using an jsp to write just a json value?",none,,usability,POS
+The GWT CODETERM1 is just a simple wrapper which ultimately just calls the function of the underlying Javascript CODETERM2 via JSNI.So I don't see any reason why they should be incompatible.,none,,usability,POS
+"Therefore I hope that ExtGWT and SmartGWT provides some tools for this (I found tools from client side, but nothing from server side).",none,,usability,POS
+"This answer should be number one, let Spring do the work for you!",none,,usability,POS
+This has a good POC on this: URL_http://keaplogik.blogspot.in/2012/05 /atmosphere-websockets-comet-with-spring.html [ URL_http://keaplogik.blogspot.in/2012/05/atmosphere-websockets-comet-with - spring.html] Server: CODESNIPPET_JAVA1 .,none,,usability,POS
+"UPDATE
+I decided to debug through Spring and I found out that Jackson was called correctly and in org.codehaus.jackson.map.ser.StdSerializerProvider the method _findExplicitUntypedSerializer contains the following code: CODESNIPPET_JAVA8 .",none,,usability,POS
+Using Jersey I'm defining a service like: CODESNIPPET_JAVA1 .,none,,usability,POS
+With Spring (and Jackson for JSON marshall/unmarshall) you can do something like: CODESNIPPET_JAVA1 .,none,,usability,POS
